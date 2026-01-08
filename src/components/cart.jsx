@@ -14,7 +14,7 @@ const Cart = ({ cart, increment, decrement ,deleteitem}) => {
                     <div className="cartitem " key={cartitem.productid._id}>
                         <div className="image  ">
                             <img src={`http://localhost:3000${cartitem.productid.imagePath}`}
-                                alt="" />
+                                alt="" className='w-full'/>
                             <h1>{cartitem.productid.name}</h1>
                             <p> Quantiyu   <button onClick={() => { increment(cartitem.productid._id) }}>+</button>{cartitem.quantity} <button onClick={() => { decrement(cartitem.productid._id) }}>-</button></p>
                         </div>
