@@ -74,6 +74,19 @@ async function decrementcart(productid)
 }
 
 
+async function getrprice(productid)
+{
+  console.log(products[productid].price)
+}
+
+
+
+
+
+
+
+
+
 async function deleteitemfromcart(productid)
 {
 const res=await fetch(`${import.meta.env.VITE_API_URL}/api/deleteitemfromcart`,{
@@ -207,7 +220,7 @@ if(isloggedin === null)
           <Route path="/register" element={<Register className="border" />}></Route>
           <Route element={<Protectedroute isloggedin={isloggedin} />}>
             <Route path="/" element={< MyAwesomeCards items={products} onadd={addtocart} className="border" />}></Route>
-            <Route path="/cart" element={< Cart cart={cart}  increment={incrementcart} decrement={decrementcart}  deleteitem={deleteitemfromcart} className="border" />}></Route>
+            <Route path="/cart" element={< Cart cart={cart}  increment={incrementcart} decrement={decrementcart}  deleteitem={deleteitemfromcart}    getprice={getrprice} className="border" />}></Route>
           </Route>
 
 
