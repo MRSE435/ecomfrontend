@@ -19,7 +19,7 @@ const CardGrid = ({ items = [], className, onadd }) => {
                                 <div className="self-start">
                                     <h1 className="text-2xl">{product.name}</h1>
                                 </div>
-                                <div className="flex justify-between ">
+                                <div className="flex justify-between mb-20 ">
                                     <h1 className=" self-center  text-green-400 text-2xl">${product.price}</h1>
                                     <button className="bg-[#1f2933] p-1 text-white  px-2 rounded-xs text-xl" onClick={() => { onadd(product) }}>Add To Cart</button>
                                 </div>

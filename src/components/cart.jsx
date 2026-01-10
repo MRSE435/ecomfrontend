@@ -5,8 +5,8 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
     return (
         <div className='w-[85%]  h-screen    mx-auto '>
             <h1 className='font-semi-bold text-3xl m-6'>Shopping Cart</h1>
-            <div className="cardandtotalamount flex w-full  min-h-[56%] mb-4">
-                <div className='cardcontainer w-[70%] flex flex-col gap-4  p-4  overflow-y-scroll overflow-x-hidden'>
+            <div className="cardandtotalamount flex w-full  h-[60%] mb-4">
+                <div className='cardcontainer w-[70%] flex flex-col gap-4  p-4  h-[84%] overflow-y-scroll overflow-x-hidden '>
                     {cart.map((cartitem) => {
                         if (!cartitem.productid || !cartitem.productid.imagePath) {
                             return null;
@@ -17,7 +17,7 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
                                 <div className="image  flex gap-6 text-xl ">
                                     <img src={`${import.meta.env.VITE_API_URL}${cartitem.productid.imagePath}`}
                                         alt="" className='productimage w-[35%] object-contain rounded-md' />
-                                    <div className=' cartproductinfo flex flex-col gap-2'>
+                                    <div className=' cartproductinfo flex flex-col gap-2 '>
                                         <h1 className='productname'>{cartitem.productid.name}</h1>
                                         <h1 className='text-green-400'>${cartitem.productid.price}</h1>
                                     </div>
