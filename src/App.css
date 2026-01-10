@@ -1,9 +1,8 @@
-.flex
-{
+.flex {
   display: flex;
 }
-.border
-{
+
+.border {
   border: 2px solid black;
 }
 
@@ -24,9 +23,102 @@
 
   text-align: center;
 }
-.card image
-{
+
+.card image {
   width: 100%;
   height: 90%;
   object-fit: cover;
 }
+
+@media (max-width:1200px) {
+  .secondcheckoutbtn {
+    font-size: 13 px;
+    padding: 10px;
+  }
+}
+
+@media (max-width:1100px) {
+ .second
+ {
+  display: none;
+ }
+ .cardcontainer
+ {
+  width: 100vw;
+ }
+ .cartitem
+ {
+  width: 100%;
+ }
+}
+
+@media (max-width:700px) {
+  .cartitem
+  {
+    flex-direction: column !important;
+  }
+  .image
+  {
+
+    flex-direction: column !important;
+    
+  }
+  .cartproductinfo
+  {
+ 
+   flex-direction: row;       /* Keep name and price side-by-side */
+    justify-content: space-between; /* Pushes price to the far right */
+    align-items: center;       /* Centers them vertically */
+    width: 100%;               /* Takes full width of the card */
+    gap: 10px;                 /* Use a small fixed gap instead of 50% */
+    margin-bottom: 20px;
+  }
+  
+  .productimage
+  {
+    width: 100%;
+  }
+  .incremdecrembtn
+  {
+   flex-direction: row;       /* Keep name and price side-by-side */
+    justify-content: space-between; /* Pushes price to the far right */
+    align-items: center;       /* Centers them vertically */
+    width: 100%;               /* Takes full width of the card */
+    gap: 10px;                 /* Use a small fixed gap instead of 50% */
+    margin-bottom: 20px;
+  }
+
+  .deletebutton
+  {
+    width: 73px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media  (max-width:530px) {
+  .incremdecrembtn
+  {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  .cartproductinfo h1 {
+    font-size: 1rem; /* Shrink text so it doesn't push width */
+  }
+  
+  .deletebutton {
+    width: 50px; /* Smaller button for tight spaces */
+  }
+}
+
+@media (max-width:560px) {
+   .total
+   {
+    font-size: 16px;
+   }
+}
+
+
