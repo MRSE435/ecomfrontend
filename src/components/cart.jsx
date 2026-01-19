@@ -1,7 +1,12 @@
-import React, { useDebugValue } from 'react'
+import React, { useDebugValue, useEffect, useMemo } from 'react'
 
 const Cart = ({ cart, increment, decrement, deleteitem }) => {
     // console.log("cart data", cart)
+   const totalprice=useMemo(()=>{
+    return cart.reduce((sum,item)=>{
+        return sum +item.productid.price * item.quantity
+    },0)
+   },[cart])
     return (
         <div className='w-[85%]  h-screen    mx-auto '>
             <h1 className='font-semi-bold text-3xl m-6'>Shopping Cart</h1>
@@ -13,7 +18,7 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
                         }
                         return (
 
-                            <div className="cartitem w-full shadow-md p-3 flex" key={cartitem.productid._id}>
+                            <div className="cartitem w-full shadow-md p-3 flex justify-between" key={cartitem.productid._id}>
                                 <div className="image  flex gap-6 text-xl ">
                                     <img src={`${import.meta.env.VITE_API_URL}${cartitem.productid.imagePath}`}
                                         alt="" className='productimage w-[35%] object-contain rounded-md' />
@@ -68,7 +73,7 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
 
                     <div className="totalseconddiv w-[80%] shadow-md h-[50%] text-2xl flex flex-col gap-9 p-4 border-2 border-gray-100">
                      <h1>Total Amount:</h1>
-                      <h2 className='self-end text-green-400'>$92000</h2>
+                      <h2 className='self-end text-green-400'>${totalprice}</h2>
                       <button className=' bg-blue-500   p-1 rounded-lg  secondcheckoutbtn   whitespace-nowrap text-white'>Proceed To Checkout</button>
                     </div>
 
@@ -84,7 +89,7 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
                     </div>
                 </div>
                 <div className="total text-2xl flex flex-col gap-7 self-end ">
-                    <h1>Total Amount:$9200</h1>
+                    <h1>Total Amount:${totalprice}</h1>
                     <button className='bg-blue-500  checkoutbottombtn p-2 rounded-xl'>Proceed to Checkout</button>
                 </div>
             </div>
