@@ -1,7 +1,14 @@
 import React, { useDebugValue, useEffect, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const Cart = ({ cart, increment, decrement, deleteitem }) => {
     // console.log("cart data", cart)
+    const navigate=useNavigate()
+    function handlecheckout()
+    {
+        navigate("/Checkout")
+    }
    const totalprice=useMemo(()=>{
     return cart.reduce((sum,item)=>{
         return sum +item.productid.price * item.quantity
@@ -74,7 +81,7 @@ const Cart = ({ cart, increment, decrement, deleteitem }) => {
                     <div className="totalseconddiv w-[80%] shadow-md h-[50%] text-2xl flex flex-col gap-9 p-4 border-2 border-gray-100">
                      <h1>Total Amount:</h1>
                       <h2 className='self-end text-green-400'>${totalprice}</h2>
-                      <button className=' bg-blue-500   p-1 rounded-lg  secondcheckoutbtn   whitespace-nowrap text-white'>Proceed To Checkout</button>
+                      <button className=' bg-blue-500   p-1 rounded-lg  secondcheckoutbtn   whitespace-nowrap text-white' onClick={()=>{handlecheckout()}}>Proceed To Checkout</button>
                     </div>
 
                 </div>
