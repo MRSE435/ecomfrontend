@@ -222,7 +222,7 @@ if(isloggedin === null)
           <Route element={<Protectedroute isloggedin={isloggedin} />}>
             <Route path="/" element={< MyAwesomeCards items={products} onadd={addtocart} className="border" />}></Route>
             <Route path="/cart" element={< Cart cart={cart}  increment={incrementcart} decrement={decrementcart}  deleteitem={deleteitemfromcart}    getprice={getrprice} className="border" />}></Route>
-            <Route path="/Checkout" element={<Checkout />} oncheckoutfetch={fetchcart}/>
+            <Route path="/Checkout" element={<Checkout  cart={cart}  />} />
           </Route>
 
 
