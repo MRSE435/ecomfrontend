@@ -11,7 +11,7 @@ const Navbar = ({ className, isloggedin, logout }) => {
           ShopEase
         </li>
 
-        <li className='relative rounded-xl'  >
+        <li className='relative rounded-xl searchbox'  >
           <input   type="search" name="" id="" className='shadow w-3xl p-2   rounded-xl ' />
           <button className="p-2   flex  justify-center w-[9%] absolute top-0   right-0 bottom-0  bg-blue-500 text-white  hover:bg-blue-600 transition rounded-r-xl">
             <svg  className='w-4'   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
