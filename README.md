@@ -325,7 +325,7 @@ ecombackend/
 
 [![GitHub](https://img.shields.io/badge/GitHub-MRSE435-181717?style=flat&logo=github)](https://github.com/MRSE435)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohammed%20Owais-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mohammed-owais-66053a2a0/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-mrse435.world-blue?style=flat&logo=google-chrome)](https://mrse435.world)
+[![Portfolio](https://img.shields.io/badge/Portfolio-mrse435.world-blue?style=flat&logo=google-chrome)](https://mrse435.world/portfolio)
 
 ---
 
