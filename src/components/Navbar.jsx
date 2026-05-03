@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ className, isloggedin, logout }) => {
   return (
-    <nav className="shadow p-2 ">
+    <nav className="shadow p-2 navbar">
       <ul className="flex justify-between items-center list-none ml-1 mr-1">
 
         {/* Logo */}
