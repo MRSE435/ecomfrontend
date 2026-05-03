@@ -86,7 +86,7 @@ const Checkout = ({cart})=> {
          
         </div>
       </div>
-      Hello
+      
     </div>
   )
 }
