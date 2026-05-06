@@ -8,6 +8,7 @@ import Login from "./components/login.jsx"
 import Cart from "./components/cart.jsx"
 import Protectedroute from './components/protectedroute.jsx';
 import MyAwesomeCards from "./components/CardsComponent.jsx"; // You can rename it here!
+import CheckoutForm from './components/CheckoutForm.jsx';
 import Checkout from './components/Checkout.jsx';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -223,6 +224,8 @@ if(isloggedin === null)
             <Route path="/" element={< MyAwesomeCards items={products} onadd={addtocart} className="border" />}></Route>
             <Route path="/cart" element={< Cart cart={cart}  increment={incrementcart} decrement={decrementcart}  deleteitem={deleteitemfromcart}    getprice={getrprice} className="border" />}></Route>
             <Route path="/Checkout" element={<Checkout  cart={cart}  />} />
+            <Route path="/CheckoutForm" element={<CheckoutForm  />} />
+
           </Route>
 
 
