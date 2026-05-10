@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Solbutton from './Solbutton'
-
-const Checkout = ({cart})=> {
+import { AppContextPipeline } from '../Context/AppContext';
+const Checkout = ()=> {
+  const AppContext=useContext(AppContextPipeline);
+  const cart=AppContext.cart;
     const total=cart.reduce((sum,item)=>sum+item.productid.price,0);
-
+  
   return (
 
 

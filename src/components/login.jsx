@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const Login = ({setisloggedin,setuser}) => {
+import { AppContextPipeline } from '../Context/AppContext'
+const Login = () => {
+  const AppContext=useContext(AppContextPipeline);
+  const setisloggedin=AppContext.setisloggedin;
+  const setuser=AppContext.setuser;
   const [username,setusername]=useState("")
   const [password,setpassword]=useState("")
   const navigate=useNavigate()

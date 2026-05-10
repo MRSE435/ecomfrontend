@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const CheckoutForm = ({ onSubmit }) => {
+  const navigate=useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -22,6 +23,8 @@ const CheckoutForm = ({ onSubmit }) => {
     localStorage.setItem("userDetails", JSON.stringify(formData));
     console.log("Form submitted:", formData);
     if (onSubmit) onSubmit(formData);
+    
+    navigate("/Checkout")
   };
 
   return (

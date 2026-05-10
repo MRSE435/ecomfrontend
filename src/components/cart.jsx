@@ -1,9 +1,14 @@
-import React, { useDebugValue, useEffect, useMemo } from 'react'
+import React, { useContext, useDebugValue, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AppContextPipeline } from '../Context/AppContext'
 
-
-const Cart = ({ cart, increment, decrement, deleteitem }) => {
+const Cart = () => {
     // console.log("cart data", cart)
+    const AppContext=useContext(AppContextPipeline);
+    const cart=AppContext.cart;
+    const increment=AppContext.increment;
+    const decrement=AppContext.decrement;
+    const deleteitem=AppContext.deleteitem;
     const navigate=useNavigate()
     function handlecheckout()
     {

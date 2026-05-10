@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
-
-const Navbar = ({ className, isloggedin, logout }) => {
+import { AppContextPipeline } from '../Context/AppContext';
+const Navbar = () => {
+  const AppContext=useContext(AppContextPipeline);
+  const isloggedin=AppContext.isloggedin;
+  const logout=AppContext.logout;
   return (
     <nav className="shadow p-2 navbar">
       <ul className="flex justify-between items-center list-none ml-1 mr-1">
