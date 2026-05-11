@@ -7,14 +7,19 @@ const Checkout = () => {
   const cart = AppContext.cart;
   const total = cart.reduce((sum, item) => sum + item.productid.price, 0);
   const adressstaus=useState(null);
-  if(localStorage.getItem("userDetails"))
-  {
+  const navigate=useNavigate();
+  const [totalsol,settotalsol]=useState();
+  useEffect(()=>{
+    if(!localStorage.getItem("userDetails"))
+    {
+      navigate("/CheckoutForm")
+    }
+  },[])
 
-  }
-  else
-  {
-    useNavigate("/CheckoutForm");
-  }
+
+
+
+
   return (
 
 
