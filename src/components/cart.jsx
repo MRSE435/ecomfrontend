@@ -6,9 +6,9 @@ const Cart = () => {
     // console.log("cart data", cart)
     const AppContext=useContext(AppContextPipeline);
     const cart=AppContext.cart;
-    const increment=AppContext.increment;
-    const decrement=AppContext.decrement;
-    const deleteitem=AppContext.deleteitem;
+    const increment=AppContext.incrementcart;
+    const decrement=AppContext.decrementcart;
+    const deleteitem=AppContext.deleteitemfromcart;
     const navigate=useNavigate()
     function handlecheckout()
     {
@@ -36,7 +36,7 @@ const Cart = () => {
                                         alt="" className='productimage w-[35%] object-contain rounded-md' />
                                     <div className=' cartproductinfo flex flex-col gap-2 '>
                                         <h1 className='productname'>{cartitem.productid.name}</h1>
-                                        <h1 className='text-green-400'>${cartitem.productid.price}</h1>
+                                        <h1 className='text-green-400'>₹{cartitem.productid.price}</h1>
                                     </div>
 
                                 </div>
