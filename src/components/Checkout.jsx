@@ -8,7 +8,7 @@ const Checkout = () => {
   const total = cart.reduce((sum, item) => sum + item.productid.price, 0);
   const adressstaus=useState(null);
   const navigate=useNavigate();
-  const [totalsol,settotalsol]=useState();
+  
   useEffect(()=>{
     if(!localStorage.getItem("userDetails"))
     {
