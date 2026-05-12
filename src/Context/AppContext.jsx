@@ -159,7 +159,7 @@ export const AppContextProvider = ({ children }) => {
     }, [isloggedin]);
 
    return (
-    <AppContextPipeline.Provider  value={{cart,isloggedin,fetchcart,incrementcart,decrementcart,deleteitemfromcart,logout,products,setisloggedin,setuser}}>
+    <AppContextPipeline.Provider  value={{cart,isloggedin,fetchcart,incrementcart,decrementcart,deleteitemfromcart,logout,products,setisloggedin,setuser,addtocart}}>
         {children}
     </AppContextPipeline.Provider>
    );
