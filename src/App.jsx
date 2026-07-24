@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { AppContextPipeline } from './Context/AppContext.jsx';
+import Maintanance from './components/Maintanance.jsx';
 function App() {
   const [count, setCount] = useState(0)
   const AppContext=useContext(AppContextPipeline);
@@ -21,6 +22,12 @@ function App() {
   const navigate=useNavigate()
 
 
+
+const [ismaintanance,setismaintanance]=useState(true)
+if(ismaintanance ==true)
+{
+  return <Maintanance />
+}
 if(isloggedin === null)
 {
   return <div>Loading authoenticating ...</div>
