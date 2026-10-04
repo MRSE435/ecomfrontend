@@ -23,7 +23,7 @@ function App() {
 
 
 
-const [ismaintanance,setismaintanance]=useState(true)
+const [ismaintanance,setismaintanance]=useState(false)
 if(ismaintanance ==true)
 {
   return <Maintanance />
